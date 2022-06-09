@@ -4,6 +4,7 @@ Mini Challenge 3 for CCAPDEV2122T2
 ## General Instructions
 - **READ THE INSTRUCTIONS FIRST BEFORE PROCEEDING!**
 - You are provided with a skeleton code for this Mini-Challenge. You are **not encouraged** to modify any part of the code unless specified. Editable parts of code are marked with `TODO` comments.
+- If you wish to proceed with a different implementation, make sure that the specification requirements are exactly met and that the intended UI is unchanged. 
 - For any clarifications, ask your instructor.
 
 ## Local Set Up
