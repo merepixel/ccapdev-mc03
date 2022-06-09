@@ -52,7 +52,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
     */
     const cardsDiv = document.querySelector('#cards');
     cardsDiv.addEventListener('click', function (e) {
-        if (e.target.matches('.remove')) {
+        if (e.target instanceof Element && e.target.matches('.remove')) {
             // your code here
         }
     }, true);
