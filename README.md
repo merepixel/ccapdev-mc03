@@ -73,7 +73,7 @@ You are already provided with the skeleton code organized in the MVC architectur
 - [`public/js/index.js`](public/js/index.js)
 - [`views/index.hbs`](views/index.hbs)
 
-If you wish to proceed with a different implementation, make sure that the specification requirements are still met.
+If you wish to proceed with a different implementation, make sure that the specification requirements are exactly met and that the intended UI is unchanged.
 Goodluck and stay safe! :sunglasses:
 
 ## Rubric
