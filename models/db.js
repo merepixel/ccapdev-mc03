@@ -1,19 +1,11 @@
+import mongoose from 'mongoose';
 
-const mongoose = require('mongoose');
-
-const User = require('./UserModel.js');
-
-const url = 'mongodb://localhost:27017/ccapdev-mc03';
-
-const options = {
-    useUnifiedTopology: true,
-    useNewUrlParser: true
-};
+const url = process.env.DB_URL;
 
 const database = {
 
     connect: function () {
-        mongoose.connect(url, options, function(error) {
+        mongoose.connect(url, function(error) {
             if(error) throw error;
             console.log('Connected to: ' + url);
         });
@@ -83,4 +75,4 @@ const database = {
 
 }
 
-module.exports = database;
+export default database;

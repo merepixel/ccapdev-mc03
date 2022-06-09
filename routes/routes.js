@@ -1,12 +1,12 @@
-const express = require('express');
-const controller = require('../controllers/controller.js');
+import { Router } from "express";
+import controller from '../controllers/controller.js'
 
-const app = express();
+const router = Router();
 
-app.get('/favicon.ico', controller.getFavicon);
-app.get('/', controller.getIndex);
-app.get('/getCheckNumber', controller.getCheckNumber);
-app.get('/add', controller.getAdd);
-app.get('/delete', controller.getDelete);
+router.get(`/favicon.ico`, controller.getFavicon);
+router.get(`/`, controller.getIndex);
+router.get(`/getCheckRefNo`, controller.getCheckRefNo);
+router.get(`/add`, controller.getAdd);
+router.get(`/delete`, controller.getDelete);
 
-module.exports = app;
+export default router;

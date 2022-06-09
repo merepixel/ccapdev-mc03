@@ -1,19 +1,25 @@
-const express = require('express');
-const hbs = require('hbs');
-const routes = require('./routes/routes.js');
-const db = require('./models/db.js');
+import "dotenv/config";
 
-const port = 9090;
+import express from "express";
+import exphbs from "express-handlebars";
+import routes from './routes/routes.js';
+import db from './models/db.js';
+
+const port = process.env.PORT;
+
 const app = express();
 
-app.set('view engine', 'hbs');
-hbs.registerPartials(__dirname + '/views/partials');
+app.engine("hbs", exphbs.engine({extname: 'hbs'}));
+app.set("view engine", "hbs");
+app.set("views", "./views");
 
-app.use(express.static('public'));
-app.use('/', routes);
+app.use(express.static(`public`));
+
+app.use(`/`, routes);
 
 db.connect();
 
 app.listen(port, function () {
-    console.log('Listening at port ' + port);
+    console.log(`Server is running at:`);
+    console.log(`http://localhost:` + port);
 });

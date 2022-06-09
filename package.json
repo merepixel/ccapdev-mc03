@@ -1,24 +1,27 @@
 {
-  "name": "ccapdev-mc03-answers",
+  "name": "ccapdev-2122t2-mc03",
   "version": "1.0.0",
-  "description": "Mini Challenge 3 Answer for CCAPDEV1920T2",
+  "description": "Mini Challenge 3 for CCAPDEV2122T2",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/arvention/ccapdev-mc03-answers.git"
+    "url": "git+https://github.com/arvention/ccapdev-2021t2-mc03.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/arvention/ccapdev-mc03-answers/issues"
+    "url": "https://github.com/arvention/ccapdev-2021t2-mc03/issues"
   },
-  "homepage": "https://github.com/arvention/ccapdev-mc03-answers#readme",
+  "type": "module",
+  "homepage": "https://github.com/arvention/ccapdev-2021t2-mc03#readme",
   "dependencies": {
-    "express": "^4.17.1",
-    "hbs": "^4.1.0",
-    "mongoose": "^5.9.7"
+    "dotenv": "^9.0.1",
+    "express": "^4.18.1",
+    "express-handlebars": "^6.0.6",
+    "mongoose": "^6.3.6"
   }
 }
