@@ -3,13 +3,13 @@ Mini Challenge 3 for CCAPDEV2122T2
 
 ## General Instructions
 - **READ THE INSTRUCTIONS FIRST BEFORE PROCEEDING!**
-- You are provided with a skeleton code for this Mini-Challenge. You are **NOT ALLOWED** to modify any part of the code unless specified. Editable parts of code are marked with `TODO` comments.
+- You are provided with a skeleton code for this Mini-Challenge. You are **not encouraged** to modify any part of the code unless specified. Editable parts of code are marked with `TODO` comments.
 - For any clarifications, ask your instructor.
 
 ## Local Set Up
 - Make sure MongoDB is installed and running.
-- Run `npm install` after [downloading the contents of the repository](https://github.com/arvention/ccapdev-2021t2-mc03/archive/refs/heads/main.zip).
-- To run the application, execute `node index.js`
+- Run `npm install` after [downloading the contents of the repository](https://github.com/nromblon/ccapdev-mc03/archive/refs/heads/master.zip).
+- To run the application, execute `node index.js` or `npm start`
 
 ## Submission Details
 - Place all necessary files in a zip file.
@@ -41,7 +41,7 @@ The picture below shows the error message when at least one of the form fields i
 
 The web application then saves the values in the database, then display the values in [`views/index.hbs`](views/index.hbs). Use [`views/partials/card.hbs`](views/partials/card.hbs) to render the `<div>` for each transaction. Upon submitting the form, the transaction should be displayed immediately **without refreshing the page**. Upon submitting the form, the fields must be emptied.
 
-**HINT:** the client should communicate with the server **asynchronously**.
+**HINT:** the client should communicate with the server asynchronously, thus data must be **fetched** from the server.
 
 **HINT:** The server can render the handlebars template and send the rendered HTML partial. See the [express documentation on `res.render`](https://expressjs.com/en/api.html#res.render) to know more.
 
@@ -50,7 +50,7 @@ The picture below shows how the web application should display the values that w
 
 Each transaction may be removed using the `X` button on the upper right of the `<div>`. Upon clicking the `X` button, the web application deletes the transaction from the database, then removes the corresponding `<div>` of the transaction from [`views/index.hbs`](views/index.hbs). This operation should be done **without refreshing the page**.
 
-Note that the reference number should be **UNIQUE** for each transaction - no two transactions may have the same reference number. Thus, you are required to check if the current value entered by the user in the `refno` text field has not yet been used by any other transaction in the database. You need to check this **EVERY TIME** the user enters a number in the `refno` text field.
+Note that the reference number should be [**UNIQUE**](https://mongoosejs.com/docs/schematypes.html#schematype-options) for each transaction - no two transactions may have the same reference number. Thus, you are required to check if the current value entered by the user in the `refno` text field has not yet been used by any other transaction in the database. You need to check this **EVERY TIME** the user enters a number in the `refno` text field.
 
 If the current value in the `refno` text field **IS IN THE DATABASE**:
 - Change the background color of the `refno` text field to `red`.
@@ -67,12 +67,13 @@ The picture below shows the changes in the form if the current value in the `ref
 
 If ever we refresh the web application, all transactions in the database should be displayed.
 
-You are already provided with the skeleton code organized in the MVC architecture. Your task is to study the web application and complete the code of the files below. You are **NOT ALLOWED** to modify other files except the files below. Editable parts of code are marked with `TODO` comments, where you can insert your code.
+You are already provided with the skeleton code organized in the MVC architecture. Your task is to study the web application and complete the code of the files below. You are **not encouraged** to modify other files except the files below. Editable parts of code are marked with `TODO` comments, where you can insert your code.
 - [`controllers/controller.js`](controllers/controller.js)
 - [`models/TransactionModel.js`](models/TransactionModel.js)
 - [`public/js/index.js`](public/js/index.js)
 - [`views/index.hbs`](views/index.hbs)
 
+If you wish to proceed with a different implementation, make sure that the specification requirements are still met.
 Goodluck and stay safe! :sunglasses:
 
 ## Rubric
@@ -81,5 +82,6 @@ Kindly check this [file](misc/rubric.pdf) for the rubric for grading.
 ## References
 Maximize the materials uploaded for class and the resources readily available on the internet.
 
-* [ccapdev-ajax](https://github.com/arvention/ccapdev-ajax) code sample
+* [Fetch API](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch) documentation
+* [Mongoose SchemaTypes](https://mongoosejs.com/docs/schematypes.html) documentation
 * [ccapdev-mongoose](https://github.com/arvention/ccapdev-mongoose) code sample
