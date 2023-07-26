@@ -9,6 +9,9 @@ const port = process.env.PORT;
 
 const app = express();
 
+app.use(express.json()); // for parsing application/json
+app.use(express.urlencoded({ extended: true }));
+
 app.engine("hbs", exphbs.engine({extname: 'hbs'}));
 app.set("view engine", "hbs");
 app.set("views", "./views");

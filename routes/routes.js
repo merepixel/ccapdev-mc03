@@ -3,6 +3,7 @@ import controller from '../controllers/controller.js'
 
 const router = Router();
 
+
 router.get(`/favicon.ico`, controller.getFavicon);
 router.get(`/`, controller.getIndex);
 router.get(`/getCheckRefNo`, controller.getCheckRefNo);

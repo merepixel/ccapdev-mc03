@@ -95,8 +95,7 @@ const database = {
             console.log('Document deleted: ' + result.deletedCount);
             return callback(true);
         });
-    }
-
+    },
 }
 
 export default database;
